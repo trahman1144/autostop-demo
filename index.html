@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autostop Luton | Trusted Car Garage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav-bar">
+      <img src="logo.png" alt="Autostop Luton Logo" class="logo-img">
+      <nav>
+        <a href="#about" class="nav-btn">About</a>
+        <a href="#services" class="nav-btn">Services</a>
+        <a href="#gallery" class="nav-btn">Gallery</a>
+        <a href="#contact" class="nav-btn">Book/Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <img src="logo.png" alt="Autostop Luton Logo" class="hero-logo">
+      <h1 class="hero-title">Trusted Car Servicing & Repairs in Luton</h1>
+      <p class="hero-sub">Experienced mechanics. Honest pricing. Local & reliable.</p>
+      <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Service</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="about">Autostop Luton is a trusted, independent car garage serving Luton and the local community. Run by experienced mechanics, we pride ourselves on our reputation for reliable, honest work and fair prices. Whether it’s a routine service or major repair, your car is always in good hands with us.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-img-grid">
+        <!-- Just change the image filenames to your real photos! -->
+        <div class="service-img-card">
+          <img src="service1.jpg" alt="General Mechanical Repairs">
+          <div class="service-overlay">
+            <div>
+              <div class="service-title">General Mechanical Repairs</div>
+              <div class="service-desc">Engines, brakes, suspension and more</div>
+            </div>
+          </div>
+        </div>
+        <div class="service-img-card">
+          <img src="service2.jpg" alt="Clutches & Gearboxes">
+          <div class="service-overlay">
+            <div>
+              <div class="service-title">Clutches & Gearboxes</div>
+              <div class="service-desc">Expert clutch & gearbox work</div>
+            </div>
+          </div>
+        </div>
+        <div class="service-img-card">
+          <img src="service3.jpg" alt="Servicing">
+          <div class="service-overlay">
+            <div>
+              <div class="service-title">Servicing</div>
+              <div class="service-desc">Full, interim & scheduled</div>
+            </div>
+          </div>
+        </div>
+        <div class="service-img-card">
+          <img src="service4.jpg" alt="Exhaust Systems">
+          <div class="service-overlay">
+            <div>
+              <div class="service-title">Exhaust Systems</div>
+              <div class="service-desc">Fitting & repair for all makes</div>
+            </div>
+          </div>
+        </div>
+        <div class="service-img-card">
+          <img src="service5.jpg" alt="Diagnostics">
+          <div class="service-overlay">
+            <div>
+              <div class="service-title">Diagnostics</div>
+              <div class="service-desc">Engine diagnostics & faults</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="garage-photo1.png" alt="Workshop">
+        <img src="garage-photo2.png" alt="Garage Exterior">
+        <img src="garage-photo3.png" alt="Mechanic at work">
+        <img src="bmw-m3-stock.jpg" alt="BMW M3 serviced">
+        <img src="audi-rs3-stock.jpg" alt="Audi RS3 serviced">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-split">
+      <div class="book-form-section">
+        <h2>Book a Service</h2>
+        <form class="book-form" onsubmit="return submitForm(event)">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Contact Number" required>
+          <input type="text" name="car" placeholder="Car Model/Year" required>
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option>General Repair</option>
+            <option>Servicing</option>
+            <option>Clutch/Gearbox</option>
+            <option>Exhaust</option>
+            <option>Diagnostics</option>
+          </select>
+          <input type="date" name="date">
+          <textarea name="message" placeholder="Describe your issue (optional)" rows="3"></textarea>
+          <button type="submit">Send Booking Request</button>
+          <div id="form-msg" style="margin-top:8px;color:#e53935;display:none;"></div>
+        </form>
+      </div>
+      <div class="contact-details-section">
+        <h2>Our Location</h2>
+        <div class="contact-details">
+          <div>Address: <a href="https://maps.app.goo.gl/Ki3BVY5rNc2mv8iQ9" target="_blank">Unit N, rear of, 18 Union St, Luton LU1 3AN</a></div>
+          <div>Phone: <a href="tel:01582797797">01582 797797</a></div>
+          <div>Email: <a href="mailto:autostopluton@gmail.com">autostopluton@gmail.com</a></div>
+          <div>Opening hours: Mon–Fri 9am–6pm | Sat 9am–2pm | Sun Closed</div>
+        </div>
+        <iframe class="map-frame" src="https://www.google.com/maps?q=Unit+N,+rear+of,+18+Union+St,+Luton+LU1+3AN&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <button id="whatsapp-btn" title="Message us on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 448 512" fill="white" style="margin-right:2px;"><path d="M380.9 97.1C339 -15.7 214.7-34 125.9 23.6S-28 262.8 13.8 375.7c9.1 24 26.7 55.8 31.8 63.3 5.1 7.6 15.2 8.4 21.6 1.8l65.6-66.4c6.4-6.5 16.6-7.2 23.6-1.4 35.8 30.5 75.2 37.5 120.6 20.4 78.5-30.3 128.3-121.6 99-200.1zm-16.2 186.1c-32.4 76-132.8 126.4-203.7 97.2-19.8-8.1-37.1-20.4-51.6-36.1l-31.7 32.1c-3.8 3.8-10 3.2-12.8-1.1C48.2 345.5 38 322.3 28.9 298.3 1.2 225.6 46.2 133.3 123.5 103.6 200.7 73.9 293.2 119.1 322.8 196.2c10.7 27.1 13.2 55.4 7.9 82.7-2.2 10.8-10.2 18.6-20.8 21.1zm-43.2-67.2c-2.9-2.8-7.3-2.7-10 .1-1.5 1.5-22.3 21.9-35.1 34.5-5.4 5.3-6.9 13.7-3.6 20.5 6.7 13.5 23.7 42.7 37.7 58.4 5.4 6.2 14.7 7.6 21.5 2.7l15.2-11c5.2-3.7 6.5-11.1 2.9-16.4-11.3-16.5-23.6-38-28.7-47.2-2-3.5-6.3-4.6-9.8-2.8l-7.5 4c-2.8 1.5-5.8.7-7.6-2.1z"/></svg>
+  </button>
+
+  <footer>
+    &copy; 2025 Autostop Luton. Website by Tahmid Abdul-Rahman.
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
