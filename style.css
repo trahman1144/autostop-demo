@@ -32,7 +32,6 @@ header {
   width: 100%;
   flex-direction: row;
 }
-/* Enlarged Header Logo */
 .logo-img {
   height: 120px;
   margin-left: 8px;
@@ -64,7 +63,6 @@ nav {
   background: var(--red);
   color: var(--white);
 }
-
 .hero {
   background: var(--white);
   text-align: center;
@@ -72,7 +70,6 @@ nav {
   border-bottom: 1.5px solid #e5393530;
   width: 100%;
 }
-/* Enlarged Hero Logo */
 .hero-logo {
   display: block;
   margin: 0 auto 40px auto;
@@ -119,7 +116,6 @@ nav {
 .cta-btn:hover {
   background: #b71c1c;
 }
-
 section {
   padding: 54px 0 0 0;
   width: 100%;
@@ -151,68 +147,46 @@ h2::after {
   color: #444;
   font-size: 1.09rem;
 }
-
-/* Service Image Cards */
-.services-img-grid {
+/* ---- Our Services Emoji Cards ---- */
+.services-emoji-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
+  gap: 30px;
   margin-top: 30px;
 }
-.service-img-card {
-  width: 245px;
-  height: 180px;
+.service-emoji-card {
+  background: #fff;
+  border: 1.5px solid #f1f1f1;
+  box-shadow: 0 2px 12px rgba(33,33,33,0.08);
   border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 2px 18px rgba(33,33,33,0.09);
-  position: relative;
-  transition: transform 0.14s, box-shadow 0.14s;
-  background: #ddd;
-  margin-bottom: 14px;
-}
-.service-img-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: filter 0.19s;
-}
-.service-img-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 36px rgba(229,57,53,0.08);
-}
-.service-img-card:hover img {
-  filter: brightness(0.8) blur(0.5px);
-}
-.service-overlay {
-  position: absolute;
-  left: 0; right: 0; bottom: 0; top: 0;
-  background: linear-gradient(to top, rgba(20,20,20,0.65) 65%, rgba(20,20,20,0.08) 100%);
-  color: #fff;
+  padding: 30px 22px 20px 22px;
+  width: 240px;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0 0 18px 18px;
-  font-weight: 700;
-  transition: background 0.17s;
-  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.15s, transform 0.13s;
+}
+.service-emoji-card:hover {
+  box-shadow: 0 6px 24px rgba(229,57,53,0.10);
+  transform: translateY(-4px) scale(1.03);
+}
+.emoji {
+  font-size: 2.4rem;
+  margin-bottom: 13px;
 }
 .service-title {
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: 0.8px;
-  margin-bottom: 2px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--red);
+  margin-bottom: 6px;
+  text-align: center;
 }
 .service-desc {
   font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.12);
+  color: #444;
+  text-align: center;
 }
-
 /* Gallery */
 .gallery-grid {
   display: grid;
@@ -223,9 +197,9 @@ h2::after {
 .gallery-grid img {
   display: block;
   width: 100%;
-  height: 220px;         /* Choose any height that fits your design */
-  object-fit: cover;     /* Crops image to fill the box */
-  object-position: center; /* Keeps the most important part centered */
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 13px;
   box-shadow: 0 2px 13px rgba(229,57,53,0.10);
   border: 2.5px solid #fff2;
@@ -236,14 +210,11 @@ h2::after {
   border: 2.5px solid var(--red);
   transform: scale(1.035);
 }
-
-
-/* Contact Split */
 .contact-split {
   display: flex;
   justify-content: center;
   gap: 56px;
-  align-items: center; /* <-- now both columns are centered vertically */
+  align-items: center;
   width: 100%;
   margin-top: 30px;
 }
@@ -254,14 +225,7 @@ h2::after {
   max-width: 480px;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* <-- makes the content inside also centered */
-}
-
-.book-form-section,
-.contact-details-section {
-  flex: 1 1 350px;
-  min-width: 280px;
-  max-width: 480px;
+  align-items: center;
 }
 .book-form-section {
   margin-bottom: 20px;
@@ -353,7 +317,6 @@ footer {
   margin-top: 45px;
   letter-spacing: 0.6px;
 }
-
 /* Responsive Fixes */
 @media (max-width: 1250px) {
   .contact-split {
@@ -403,9 +366,8 @@ footer {
     padding: 9px 13px;
   }
   .container { width: 99%; }
-  .services-img-grid { gap: 12px; }
-  .service-img-card { width: 98vw; max-width: 350px; height: 140px;}
-  .services-grid, .gallery-grid, .why-choose-list { flex-direction: column; gap: 16px; }
+  .services-emoji-grid { gap: 18px; }
+  .service-emoji-card { width: 97vw; max-width: 340px; padding: 22px 10px 15px 10px; }
   section { padding: 32px 0 0 0;}
   .gallery-grid img { height: 110px;}
   .hero-logo {
